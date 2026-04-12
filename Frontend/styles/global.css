@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Manrope:wght@200..800&display=swap');
 
 @import url('./header.css');
+@import url('./hero.css');
 
 
 :root {
@@ -60,4 +61,29 @@ li{
 }
 button{
     cursor: pointer;
+}
+p{
+    color: var(--text-color-4);
+}
+h1{
+    font-size: 70px;
+    line-height: 110%;
+    max-width: 1020px;
+    color: var(--stroke-color-1);
+    margin-bottom: 46px;
+}
+h1 span{
+    color: var(--main-color-3);
+}
+.button-v1{
+    background: rgba(225, 240, 225, 1);
+    color: var(--text-color-1);
+    font-weight: 600;
+    border: none;
+}
+.button-v2{
+    background: var(--background-color-1);
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+    border: none;
 }

@@ -125,15 +125,7 @@
     align-items: center;
 }
 .header__bott-butt button{
-    background: rgba(238, 248, 238, 1);
-    color: var(--text-color-1);
     font-size: var(--text-lg);
-    font-weight: 600;
-    border: none;
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 21.5px 28px;
-}
-.header__bott-butt button:nth-child(2){
-    background: var(--background-color-1);
-    color: rgba(255, 255, 255, 1);
 }

@@ -1,0 +1,116 @@
+.hero{
+    background: var(--background-color-3);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+.hero-background{
+    position: absolute;
+    top: 0;
+    right: -80px; 
+    height: 100%; 
+    object-fit: cover; 
+}
+.hero-obj{
+    position: absolute;
+    right: 146px;
+    bottom: 0;
+}
+.hero__content-title{
+    margin-bottom: 50px;
+}
+.hero__content-title p{
+    font-size: var(--text-2xl);
+    margin-bottom: 40px;
+}
+.hero__content-tab{
+    display: flex;
+    gap: 12px;
+}
+.hero__content-tab li{
+    font-size: var(--text-2xl);
+    color: var(--text-color-2);
+    font-weight: 600;
+    list-style: inside;
+    padding: 20px 24px;
+    border: 1px solid rgba(1, 79, 45, 0.2);
+    border-radius: 16px;
+}
+
+.hero__content-cards{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 60px;
+}
+.hero__card{
+    max-width: 292px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(223, 237, 224, 1);
+    border-radius: 20px;
+}
+.hero__card-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.hero__card-top span{
+    font-size: var(--text-base);
+    color: var(--text-color-4);
+    margin-bottom: 14px;
+    font-weight: 500;
+}
+.hero__card-top h3{
+    color: var(--text-color-2);
+    font-size: var(--text-2xl);
+}
+
+.hero__card-list{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.hero__card p{
+    font-size: var(--text-base);
+    font-weight: 500;
+    max-width: 224px;
+}
+
+.hero__card-price{
+    margin-bottom: 30px;
+    display: inline-block;
+    padding: 16px;
+    border: 1px solid rgba(223, 237, 224, 1);
+    border-radius: 12px;
+}
+.hero__card-price p{
+    font-size:var(--text-base);
+    color: var(--text-color-4);
+}
+.hero__card-price p span{
+    font-size: var(--text-lg);
+    color: var(--text-color-2);
+    font-weight: 600;
+}
+.hero__card button{
+    width: 100%;
+    padding: 19px;
+    font-size: var(--text-lg);
+    border: none;
+    border-radius: 14px;
+    background: rgba(238, 248, 238, 1);
+    color: var(--text-color-2);
+    font-weight: 600;
+}
+.hero__content-butt{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.hero__content-butt button{
+    padding: 23.5px 57px;
+    border-radius: 16px;
+    font-size: var(--text-xl);
+}
