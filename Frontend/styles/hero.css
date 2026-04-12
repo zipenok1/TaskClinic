@@ -13,14 +13,19 @@
 }
 .hero-obj{
     position: absolute;
-    right: 146px;
+    right: 7.8%;
     bottom: 0;
+    z-index: 0;
+}
+.hero__content{
+    position: relative;
+    z-index: 1;
 }
 .hero__content-title{
     margin-bottom: 50px;
 }
 .hero__content-title p{
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
     margin-bottom: 40px;
 }
 .hero__content-tab{
@@ -28,7 +33,7 @@
     gap: 12px;
 }
 .hero__content-tab li{
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
     color: var(--text-color-2);
     font-weight: 600;
     list-style: inside;
@@ -56,14 +61,14 @@
     margin-bottom: 30px;
 }
 .hero__card-top span{
-    font-size: var(--text-base);
+    font-size: var(--text-sm);
     color: var(--text-color-4);
     margin-bottom: 14px;
     font-weight: 500;
 }
 .hero__card-top h3{
     color: var(--text-color-2);
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
 }
 
 .hero__card-list{
@@ -73,7 +78,7 @@
     margin-bottom: 20px;
 }
 .hero__card p{
-    font-size: var(--text-base);
+    font-size: var(--text-sm);
     font-weight: 500;
     max-width: 224px;
 }
@@ -86,18 +91,18 @@
     border-radius: 12px;
 }
 .hero__card-price p{
-    font-size:var(--text-base);
+    font-size:var(--text-sm);
     color: var(--text-color-4);
 }
 .hero__card-price p span{
-    font-size: var(--text-lg);
+    font-size: var(--text-base);
     color: var(--text-color-2);
     font-weight: 600;
 }
 .hero__card button{
     width: 100%;
     padding: 19px;
-    font-size: var(--text-lg);
+    font-size: var(--text-base);
     border: none;
     border-radius: 14px;
     background: rgba(238, 248, 238, 1);
@@ -112,5 +117,5 @@
 .hero__content-butt button{
     padding: 23.5px 57px;
     border-radius: 16px;
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
 }

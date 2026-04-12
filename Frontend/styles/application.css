@@ -1,0 +1,87 @@
+.application{
+    background: var(--main-color-1);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+.applic-background{
+    position: absolute;
+    top: 0;
+    right: -40px; 
+    height: 100%;
+    object-fit: cover; 
+}
+.applic-obj{
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    z-index: 0;
+}
+.application__content{
+    position: relative;
+    z-index: 1;
+}
+.application__content h2{
+    color: rgba(255, 255, 255, 1);
+    max-width: 863px;
+    margin-bottom: 50px;
+}
+.application__content p{
+    font-size: var(--text-xl);
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 100px;
+}
+
+.application__content form {
+    position: relative;
+    z-index: 1;
+    max-width: 812px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 12px;
+    align-items: center;
+}
+
+.application__content form input {
+    padding: 22px 24px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    font-size: var(--text-base);
+}.application__content form input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.application__content form button {
+    padding: 23.5px;
+    font-size: var(--text-lg);
+}
+
+.application-checkbox {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+.application-checkbox a{
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 130%;
+    font-size: var(--text-xs);
+}
+.application-checkbox input {
+    flex-shrink: 0; 
+}
+.application__content form input:first-child {
+    grid-column: 1 / 2; 
+}
+.application__content form input:nth-child(2) {
+    grid-column: 2 / 3;
+}
+.application__content form button {
+    grid-column: 1 / 2; 
+}
+.application-checkbox {
+    grid-column: 2 / 3; 
+}
