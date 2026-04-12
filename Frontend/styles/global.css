@@ -1,0 +1,54 @@
+@import url('./header.css');
+
+@font-face {
+	font-family: 'LTWave';
+	src: url('../fonts/ltwave.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/ltwave.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/ltwave.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/ltwave.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/ltwave.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/ltwave.svg#ltwave') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+:root {
+    --main-color-1: rgba(0, 120, 68, 1);
+    --main-color-2: rgba(0, 71, 40, 1);
+    --main-color-3: rgba(120, 216, 100, 1);
+
+    --background-color-1: rgba(0, 120, 68, 1);
+    --background-color-2: rgb(255, 255, 255);
+    --background-color-3: rgba(245, 248, 245, 1);
+    --background-color-4: rgba(225, 240, 225, 1);
+
+    --text-color-1: rgba(0, 71, 40, 1);
+    --text-color-2: rgba(0, 120, 68, 1);
+    --text-color-3: rgba(207, 207, 207, 1);
+    --text-color-3: rgba(61, 91, 78, 1);
+    
+    --stroke-color-1: rgba(0, 71, 40, 1);
+    --stroke-color-2: rgba(255, 255, 255, 1);
+    --stroke-color-3: rgba(61, 91, 78, 1);
+
+    --text-xs: 0.75rem;      /* 12px */
+    --text-sm: 0.875rem;     /* 14px */
+    --text-base: 1rem;       /* 16px */
+    --text-lg: 1.125rem;     /* 18px */
+    --text-xl: 1.25rem;      /* 20px */
+    --text-2xl: 1.5rem;      /* 24px */
+    --text-3xl: 1.875rem;    /* 30px */
+    --text-4xl: 2.25rem;     /* 36px */
+    --text-5xl: 2.5rem;      /* 40px */
+    --text-h1: 3.25rem;      /* 52px */
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrap {
+    max-width: 1920px;
+    width: calc(100% - 200px); 
+    margin: 0 auto;
+}

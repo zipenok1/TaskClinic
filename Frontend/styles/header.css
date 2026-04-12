@@ -1,0 +1,14 @@
+.header{
+    padding: 20px 0;
+}
+.header__top-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header__top-logo span{
+    font-size: 32.52px;
+    font-family: "LTWave";
+    color: var(--text-color-1);
+    font-weight: 600;
+}
