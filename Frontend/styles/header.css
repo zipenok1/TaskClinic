@@ -1,14 +1,139 @@
 .header{
     padding: 20px 0;
 }
+.header img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.header__top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__top-left{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 .header__top-logo{
     display: flex;
     align-items: center;
     gap: 10px;
 }
 .header__top-logo span{
-    font-size: 32.52px;
-    font-family: "LTWave";
+    font-size: var(--text-3xl);
     color: var(--text-color-1);
     font-weight: 600;
+}
+.header__top-logo p{
+    font-size: var(--text-base);
+    color: var(--text-color-4);
+}
+
+.header__top-contacts{
+    gap: 24px;
+    align-items: center;
+    display: flex;
+    border: 1px solid rgba(238, 248, 238, 1);
+    border-radius: 16px;
+    padding: 14px 20px;
+}
+.header__top-contacts img{
+    width: var(--icon-md);
+    height: var(--icon-md);
+}
+.header__contacts-grup{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.header__contacts-grup:nth-child(2){
+    border-left: 1px solid rgba(238, 248, 238, 1);
+    padding: 0 24px;
+    border-right: 1px solid rgba(238, 248, 238, 1);
+}
+
+.header__contacts-grup span{
+    font-size: var(--text-sm);
+    color: var(--text-color-4);
+}
+.header__contacts-grup p{
+    color: var(--text-color-2);
+    font-weight: 600;
+    font-size: var(--text-base);
+}
+
+.header-social{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header-social img{
+    width: var(--icon-md);
+    height: var(--icon-md);
+}
+.header-social a{
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(238, 248, 238, 1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.header__bott{
+    margin-top: 17.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__bott ul{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.header__bott ul li:nth-child(1){
+    background: var(--main-color-3);
+    color: rgba(255, 255, 255, 1);
+    list-style: inside;
+}
+.header__bott ul li{
+    background: rgba(238, 248, 238, 1);
+    padding: 20px 30px;
+    border-radius: 12px;
+}
+
+.header__bott a.white {
+    color: rgba(255, 255, 255, 1);
+}
+
+.header__bott a{
+    color: var(--text-color-1);
+    font-size: var(--text-lg);
+    font-weight: 600;
+}
+.header__bott-butt{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.header__bott-butt button{
+    background: rgba(238, 248, 238, 1);
+    color: var(--text-color-1);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    padding: 21.5px 28px;
+}
+.header__bott-butt button:nth-child(2){
+    background: var(--background-color-1);
+    color: rgba(255, 255, 255, 1);
 }
