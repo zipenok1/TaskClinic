@@ -75,10 +75,6 @@
 .footer__list li a {
     color: var(--text-color-1);
     text-decoration: none;
-    transition: color 0.2s;
-}
-.footer__list li a:hover {
-    color: var(--main-color-3);
 }
 .footer__list > .header__contacts-grup:nth-child(2){
     border-left: none;
