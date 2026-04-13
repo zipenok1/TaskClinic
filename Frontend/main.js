@@ -61,7 +61,9 @@ function burger() {
 window.addEventListener('resize', function() {
     const mobileNav = document.querySelector('.mobile-nav')
     const burgerBtn = document.querySelector('.burger')
+    const burgerImg = burgerBtn.querySelector('img')
     if (window.innerWidth > 813) {
+        burgerImg.src = 'assets/icon/burger.svg'
         mobileNav.classList.remove('active')
         burgerBtn.classList.remove('active')
     }
