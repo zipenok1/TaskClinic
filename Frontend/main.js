@@ -39,6 +39,34 @@ function closeModal(){
     document.body.style.overflow = ''
 }
 
+function burger() {
+    const mobileNav = document.querySelector('.mobile-nav')
+    const burgerBtn = document.querySelector('.burger')
+    const burgerImg = burgerBtn.querySelector('img')
+
+    if (window.innerWidth > 813) {
+        mobileNav.classList.remove('active')
+        burgerBtn.classList.remove('active')
+        return;
+    }
+    mobileNav.classList.toggle('active')
+    burgerBtn.classList.toggle('active')
+
+    if (burgerBtn.classList.contains('active')) {
+        burgerImg.src = 'assets/icon/burder-close.svg'
+    } else {
+        burgerImg.src = 'assets/icon/burger.svg'
+    }
+}
+window.addEventListener('resize', function() {
+    const mobileNav = document.querySelector('.mobile-nav')
+    const burgerBtn = document.querySelector('.burger')
+    if (window.innerWidth > 813) {
+        mobileNav.classList.remove('active')
+        burgerBtn.classList.remove('active')
+    }
+})
+
 const faqItems = document.querySelectorAll('.questions__faq-item')
 faqItems.forEach(item => {
     const header = item.querySelector('.questions__faq-grup')
@@ -49,6 +77,6 @@ faqItems.forEach(item => {
                 otherItem.classList.remove('active')
             }
         })
-        item.classList.toggle('active');
+        item.classList.toggle('active')
     })
 })

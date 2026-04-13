@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="Image/x-icon" href="assets/icon/logo.svg" rel="icon">
     <link rel="stylesheet" href="styles/global.css">
     <script src="main.js" defer></script>
     <title>АкваМед</title>
@@ -71,12 +72,75 @@
             </nav>
             <div class="header__bott-butt">
                 <button onclick="openModal()" class="button-v1">Записаться</button>
-                <button onclick="openModal()" class="button-v2">Капельница на дому</button>
+                <button class="button-v2">Капельница на дому</button>
             </div>
         </div>
-        <button class="burger">
+        <button onclick="burger()" class="burger">
             <img src="assets/icon/burger.svg" alt="burger">
         </button>
+
+        <div class="mobile-nav " id="mobileNav">
+            <div class="mobile-nav__inner">
+                <div class="mobile-nav__search">
+                    <input type="text" placeholder="Поиск по сайту">
+                    <button><img src="assets/icon/search.svg" alt="search"></button>
+                </div>
+                <button onclick="openModal()" class="button-v2 mobile-nav__consult">Бесплатная консультация</button>
+                <nav class="mobile-nav__menu">
+                    <ul>
+                        <li><a href="" class="white">Услуги</a></li>
+                        <li><a href="">О клинике</a></li>
+                        <li><a href="">Цены</a></li>
+                        <li><a href="">Врачи</a></li>
+                        <li><a href="">Контакты</a></li>
+                        <li><a href="">Статьи</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-nav__contacts">
+                    <div class="header__contacts-grup">
+                        <img src="assets/icon/tel.svg" alt="tel">
+                        <div>
+                            <span>Телефон</span>
+                            <p>+7 (800) 889-99-99</p>
+                        </div>
+                    </div>
+                    <div class="header__contacts-grup">
+                        <img src="assets/icon/address.svg" alt="address">
+                        <div>
+                            <span>Адрес</span>
+                            <p>Санкт-Петербург, ул. Авиаконструкторов 45к1</p>
+                        </div>
+                    </div>
+                    <div class="header__contacts-grup">
+                        <img src="assets/icon/email.svg" alt="time">
+                        <div>
+                            <span>Электронная почта</span>
+                            <p>info@kapelnica-med.ru</p>
+                        </div>
+                    </div>
+                    <div class="header__contacts-grup">
+                        <img src="assets/icon/time.svg" alt="time">
+                        <div>
+                            <span>Время работы</span>
+                            <p>Круглосуточно, 24/7</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-social">
+                    <img src="assets/icon/mode.svg" alt="mode">
+                    <a href="">
+                        <img src="assets/icon/vk.svg" alt="vk">
+                    </a>
+                    <a href="">
+                        <img src="assets/icon/tg.svg" alt="tg">
+                    </a>
+                    <a href="">
+                        <img src="assets/icon/od.svg" alt="od">
+                    </a>
+                </div>
+            </div>
+        </div>     
+
     </header>
     <div class="modal">
         <div class="modal__content">
@@ -146,16 +210,16 @@
                         <div class="hero__card-top">
                             <div>
                                 <span>Капельница</span>
-                                <h3>Детокс</h3>
+                                <h3>Энергия</h3>
                             </div>
                             <img src="assets/icon/picture.svg" alt="picture">
                         </div>
                         <div class="hero__card-list">
                             <img src="assets/icon/ellipse.svg" alt="ellipse">
-                            <p>очищение организма после алкоголя и нагрузок</p>
+                            <p>быстрое восстановление сил и тонуса</p>
                         </div>
                         <div class="hero__card-price">
-                            <p>Цена: <span>от 5 000 ₽</span></p>
+                            <p>Цена: <span>от 5 500 ₽</span></p>
                         </div>
                         <button>Подробнее</button>
                     </div>
@@ -163,7 +227,7 @@
                         <div class="hero__card-top">
                             <div>
                                 <span>Капельница</span>
-                                <h3>Детокс</h3>
+                                <h3>Золушка</h3>
                             </div>
                             <img src="assets/icon/picture.svg" alt="picture">
                         </div>
@@ -190,27 +254,22 @@
                 <h2>Что даёт инфузионная терапия?</h2>
                 <div class="advantages__content-cards">
                     <img class="advantages-obj" src="assets/images/advan.png" alt="advan">
-
                     <div class="advantages__card">
                         <img src="assets/icon/advan1.svg" alt="advan1">
                         <p>Эффект уже после первой процедуры</p>
                     </div>
-
                     <div class="advantages__card">
-                        <img src="assets/icon/advan1.svg" alt="advan1">
-                        <p>Эффект уже после первой процедуры</p>
+                        <img src="assets/icon/advan2.svg" alt="advan1">
+                        <p>100% усвоение — витамины и препараты минуют ЖКТ</p>
                     </div>
-
                     <div class="advantages__card">
-                        <img src="assets/icon/advan1.svg" alt="advan1">
-                        <p>Эффект уже после первой процедуры</p>
+                        <img src="assets/icon/time.svg" alt="advan1">
+                        <p>5 капельниц = 3 месяца приема витаминов</p>
                     </div>
-
                     <div class="advantages__card">
-                        <img src="assets/icon/advan1.svg" alt="advan1">
-                        <p>Эффект уже после первой процедуры</p>
+                        <img src="assets/icon/advan4.svg" alt="advan1">
+                        <p>Без нагрузки на желудок и печень</p>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -637,7 +696,116 @@
         </section> 
     </main>
     <footer class="footer">
-
+        <div class="footer__content wrap">
+            <div class="footer__content-left">
+                <div class="header__top-logo">
+                    <img src="assets/icon/logo.svg" alt="logo">
+                    <div>
+                        <span>АкваМед</span>
+                        <p>Клиника капельниц</p>
+                    </div>
+                </div>
+                <div class="footer-search">
+                    <div class="mobile-nav__search">
+                        <input type="text" placeholder="Поиск по сайту">
+                        <button><img src="assets/icon/search.svg" alt="search"></button>
+                    </div>
+                    <button onclick="openModal()" class="button-v2 mobile-nav__consult">Бесплатная консультация</button>                   
+                </div>
+                <div class="header-social">
+                    <img src="assets/icon/mode.svg" alt="mode">
+                    <a href="">
+                        <img src="assets/icon/vk.svg" alt="vk">
+                    </a>
+                    <a href="">
+                        <img src="assets/icon/tg.svg" alt="tg">
+                    </a>
+                    <a href="">
+                        <img src="assets/icon/od.svg" alt="od">
+                    </a>
+                </div>
+                <div>
+                    <p>Карта сайта</p>
+                    <p>Политика конфиденциальности</p>
+                </div>
+                <div>
+                    <p>© 2025 Все права защищены</p>
+                    <p>Официальный медицинский сайт клиники капельниц и инфузионной терапии «Аквамед» в Москве.</p>
+                </div>
+            </div>
+            <div class="footer__content-right">
+                <div class="footer__right-box">
+                    <div class="footer__col">
+                        <h3 class="footer__title">О клинике</h3>
+                        <ul class="footer__list">
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Специалисты</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#">Фотогалерея</a></li>
+                            <li><a href="#">Цены</a></li>
+                            <li><a href="#">Акции</a></li>
+                            <li><a href="#">Статьи</a></li>
+                            <li><a href="#">Ответы на вопросы</a></li>
+                            <li><a href="#">Лицензии</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__title">Капельницы</h3>
+                        <ul class="footer__list">
+                            <li><a href="#">Капельница Детокс</a></li>
+                            <li><a href="#">Капельница Энергия</a></li>
+                            <li><a href="#">Капельница Золушка</a></li>
+                            <li><a href="#">Капельница Детокс</a></li>
+                            <li><a href="#">Капельница Энергия</a></li>
+                        </ul>
+                    </div>   
+                    <div class="footer__col">
+                        <h3 class="footer__title">Контактные данные</h3>
+                        <ul class="footer__list">
+                            <div class="header__contacts-grup">
+                                <img src="assets/icon/tel.svg" alt="tel">
+                                <div>
+                                    <span>Телефон</span>
+                                    <p>+7 (800) 889-99-99</p>
+                                </div>
+                            </div>
+                            <div class="header__contacts-grup">
+                                <img src="assets/icon/address.svg" alt="address">
+                                <div>
+                                    <span>Адрес</span>
+                                    <p>Санкт-Петербург, ул. Авиаконструкторов 45к1</p>
+                                </div>
+                            </div>
+                            <div class="header__contacts-grup">
+                                <img src="assets/icon/email.svg" alt="time">
+                                <div>
+                                    <span>Электронная почта</span>
+                                    <p>info@kapelnica-med.ru</p>
+                                </div>
+                            </div>
+                            <div class="header__contacts-grup">
+                                <img src="assets/icon/time.svg" alt="time">
+                                <div>
+                                    <span>Время работы</span>
+                                    <p>Круглосуточно, 24/7</p>
+                                </div>
+                            </div>
+                        </ul>
+                    </div> 
+                </div>
+                <div class="footer__right-text">
+                    <p>
+                        Сайт носит исключительно информационный характер и не является публичной офертой. 
+                        Консультационные услуги, оказываемые по телефону, мессенджерам и в соцсетях носят 
+                        исключительно информационный характер и не являются медицинскими услугами. 
+                        Медицинская помощь оказывается в домашних условиях по адресу и месту нахождения пациента и 
+                        месту вызова врача.
+                    </p>
+                    <p>Медицинские услуги оказываются по лицензии клиники-партнера ООО «Кристалл» Л041-01148-78/00347913 ИНН: 7811740190</p>
+                    <p>Адрес оказания медицинских услуг в стационаре : 192148, Россия. г. Санкт-Петербург, улица Седова, дом 37, литер А, помещение 20-Н. 21-Н, офис 17</p>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
