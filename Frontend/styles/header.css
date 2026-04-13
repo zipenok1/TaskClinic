@@ -49,10 +49,12 @@
     height: var(--icon-md);
 }
 .header__contacts-grup{
+    width: fit-content;
     display: flex;
     align-items: center;
     gap: 12px;
 }
+
 .header__contacts-grup:nth-child(2){
     border-left: 1px solid rgba(238, 248, 238, 1);
     padding: 0 24px;
@@ -129,4 +131,101 @@
     font-size: var(--text-lg);
     border-radius: 16px;
     padding: 21.5px 28px;
+}
+.burger{
+    display: none;
+}
+@media(max-width: 1620px){
+    .header__contacts-grup:nth-child(3){
+        display: none;
+    }
+    .header__contacts-grup:nth-child(2) {
+        border-left: none;
+        border-right: none;
+        padding: 0;
+    }
+    .header__contacts-grup span{
+        font-size: var(--text-xs);
+    }
+    .header__contacts-grup p{
+        font-size: var(--text-sm);
+    }
+    .header__bott a{
+        font-size: var(--text-sm);
+    }
+    .header__bott-butt button{
+        font-size: var(--text-sm);
+        padding: 14px 24px;
+    }
+    .header__bott ul li {
+        padding: 14px 24px;
+    }
+    .header-social a {
+        padding: 14px;
+    }
+    .header-social img {
+        width: var(--icon-sm);
+        height: var(--icon-sm);
+    }
+}
+@media(max-width:1200px){
+    .header__top-contacts {
+        border: none;
+        border-radius: 0;
+    }
+    .header__top-logo img{
+        width: 46px;
+    }
+    .header__top-logo span{
+        font-size: var(--text-xl);
+    }
+    .header__top-logo p{
+        font-size: var(--text-xs);
+    }
+    .header__top-left {
+        gap: 20px;
+    }
+    .header__bott {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .header__contacts-grup > div{
+        word-break: break-word;     
+        white-space: normal;        
+        max-width: 200px;  
+    }
+    .header-social img {
+        width: var(--icon-xs);
+        height: var(--icon-xs);
+    }
+    .header-social a {
+        padding: 10px;
+    }
+}
+@media(max-width:813px){
+    .header__top-logo div:nth-child(2), 
+    .header__top-contacts, .header-social, 
+    .header__bott ul, .header__bott-butt button:nth-child(1){
+        display: none;
+    }
+    .header__top {
+        width: auto;
+        display: block;
+    }
+    .header__bott {
+        margin-top: 0;
+        display: block;
+    }
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .burger{
+        display: block;
+        padding: 15px;
+        background: rgba(238, 248, 238, 1);
+        border-radius: 10px;
+    }
 }

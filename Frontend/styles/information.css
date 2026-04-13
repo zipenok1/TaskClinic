@@ -1,0 +1,100 @@
+.information__content{
+    padding-top: 100px;
+}
+.information__content h2{
+    color: var(--text-color-1);
+    margin-bottom: 70px;
+}
+.information__content-box{
+    display: flex;
+    gap: 42px;
+    padding-bottom: 100px;
+}
+.information-img{
+    width: 418px; 
+    height: 418px; 
+    object-fit: cover;
+    border-radius: 20px; 
+    flex-shrink: 0;
+}
+.information-text > p{
+    font-size: var(--text-lg);
+    margin-bottom: 30px;
+}
+.information-text > p:last-child{
+    margin-bottom: 0px;
+}
+.information-text > p:nth-child(3), .information-text > p:nth-child(7){
+    margin-bottom: 20px;
+}
+.information-text ul li{
+    margin-bottom: 16px;
+    font-size: var(--text-lg);
+    color: var(--text-color-4);
+    list-style: inside;
+}
+
+.information__banner{
+    margin: 30px 0;
+    padding: 30px;
+    border-radius: 20px;
+    background: var(--background-color-3);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+.information__banner p{
+    font-size: var(--text-xl);
+    color: var(--text-color-1);
+    font-weight: 500;
+}
+
+.information__content h3{
+    font-size: var(--text-5xl);
+    color: var(--text-color-1);
+    margin-bottom: 40px;
+    margin-top: 70px;
+}
+
+.information__card{
+    padding: 30px;
+    background: var(--background-color-3);
+    border-radius: 20px;
+    margin: 30px 0;
+}
+.information__card-top{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(223, 237, 224, 1);
+}
+.information__card-top p{
+    font-size: var(--text-xl);
+    color: var(--text-color-1);
+    font-weight: 500;
+}
+
+.information__card-bott{
+    padding-top: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.information__card-bott img{
+    border-radius: 16px;
+}
+.information__card-bott div p:nth-child(1){
+    font-size: var(--text-xl);
+    color: var(--text-color-1);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.information__card-bott div p:nth-child(2){
+    font-size: var(--text-lg);
+    margin-bottom: 30px;
+}
+.information__card-bott div p:nth-child(3){
+    color: var(--text-color-2);
+    font-weight: 500;
+}

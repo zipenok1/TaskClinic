@@ -5,11 +5,10 @@
     overflow: hidden;
     margin-bottom: 100px;
 }
-
 .applic-background{
     position: absolute;
     top: 0;
-    right: -40px; 
+    right: -2%; 
     height: 100%;
     object-fit: cover; 
 }
