@@ -70,14 +70,45 @@
                 </ul>
             </nav>
             <div class="header__bott-butt">
-                <button class="button-v1">Записаться</button>
-                <button class="button-v2">Капельница на дому</button>
+                <button onclick="openModal()" class="button-v1">Записаться</button>
+                <button onclick="openModal()" class="button-v2">Капельница на дому</button>
             </div>
         </div>
         <button class="burger">
             <img src="assets/icon/burger.svg" alt="burger">
         </button>
     </header>
+    <div class="modal">
+        <div class="modal__content">
+            <img onclick="closeModal()" src="assets/icon/close.svg" alt="close">
+            <div class="application__content">
+                <h2>Не знаете какая капельница или процедура вам подойдет?</h2>
+                <p>Оставьте заявку, наш специалист перезвонит вам и бесплатно проконсультирует вас</p>
+                <form>
+                    <input 
+                        type="text"
+                        placeholder="Ваше имя"
+                        required
+                    >
+                    <input 
+                        type="tel"
+                        placeholder="Ваш номер телефона"
+                        required
+                    >
+                    <button class="button-v3">
+                        Отправить заявку
+                    </button>
+                    <div class="application-checkbox">
+                        <input 
+                            type="checkbox"
+                            required
+                        >
+                        <a href="">Нажимая кнопку я соглашаюсь с политикой конфединциальности и пользовательским соглашением</a>
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </div>
     <main class="main">
         <section class="hero">
             <div class="hero__content wrap">
@@ -275,7 +306,6 @@
                     </div>
                     <img class="information-img" src="assets/images/information1.jpg" alt="information">
                 </div>
-
                 <h3>Текстовый блок H3</h3>
                 <div class="information__content-box">
                     <div class="information-text">
@@ -293,7 +323,6 @@
                             некоторых оппонентов говорит о возможностях модели развития. Однозначно, предприниматели в 
                             сети интернет своевременно верифицированы.
                         </p>
-
                         <div class="information__card">
                             <div class="information__card-top">
                                 <img src="assets/icon/informationSVG.svg" alt="information">
@@ -322,7 +351,7 @@
                             качества экспериментов, поражающих по своей масштабности и грандиозности.
                         </p>
                     </div>
-                    <img class="information-img" src="assets/images/information2.jpg" alt="information">
+                    <img class="information-img del" src="assets/images/information2.jpg" alt="information">
                 </div>
             </div>
         </section>
@@ -332,6 +361,7 @@
                 <div class="doctors__content-banner">
                     <div class="doctors-tab">
                         <button><li>Главный врач клиники, психиатр-нарколог</li></button>
+                        <button>• психиатр-нарколог</button>
                         <button>Опыт работы 33 года</button>
                     </div>
                     <h4>Константинопольский Константин Константинович</h4>
@@ -472,30 +502,142 @@
             <div class="questions__content wrap">
                 <h2>Отвечаем на ваши вопросы</h2>
                 <div class="questions__faq">
-                    <div class="questions__faq-grup">
-                        <p>Существуют ли в клинике пакетные предложения или скидки?</p>
-                        <img src="assets/icon/plus.svg" alt="plus">
+                    <div class="questions__faq-item">
+                        <div class="questions__faq-grup">
+                            <p>Существуют ли в клинике пакетные предложения или скидки?</p>
+                            <img class="faq-toggle" src="assets/icon/plus.svg" alt="plus">
+                        </div>
+                        <div class="questions__faq-answer">
+                            <div class="information__card">
+                                <div class="information__card-top">
+                                    <p>
+                                        Клиника работает на основании медицинской лицензии и всех 
+                                        необходимых разрешений. Работаем с пациентами на основе
+                                        заключения договора о предоставлении медицинских услуг - 
+                                        прозрачно, безопасно и с защитой вашего здоровья.
+                                    </p>
+                                </div>
+                                <div class="information__card-bott">
+                                    <img src="assets/images/info-ava.jpg" alt="info">
+                                    <div>
+                                        <p>Константинопольский Константин Константинович</p>
+                                        <p>Главный врач клиники, психиатр-нарколог</p>
+                                        <p>Опыт работы: 13 лет</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="questions__faq-grup">
-                        <p>Клиника работает на основании медицинской лицензии и всех необходимых разрешений?</p>
-                        <img src="assets/icon/plus.svg" alt="plus">
+                    <div class="questions__faq-item">
+                        <div class="questions__faq-grup">
+                            <p>Клиника работает на основании медицинской лицензии и всех необходимых разрешений?</p>
+                            <img class="faq-toggle" src="assets/icon/plus.svg" alt="plus">
+                        </div>
+                        <div class="questions__faq-answer">
+                            <div class="information__card">
+                                <div class="information__card-top">
+                                    <p>
+                                        Клиника работает на основании медицинской лицензии и всех 
+                                        необходимых разрешений. Работаем с пациентами на основе
+                                        заключения договора о предоставлении медицинских услуг - 
+                                        прозрачно, безопасно и с защитой вашего здоровья.
+                                    </p>
+                                </div>
+                                <div class="information__card-bott">
+                                    <img src="assets/images/info-ava.jpg" alt="info">
+                                    <div>
+                                        <p>Константинопольский Константин Константинович</p>
+                                        <p>Главный врач клиники, психиатр-нарколог</p>
+                                        <p>Опыт работы: 13 лет</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="questions__faq-grup">
-                        <p>Существуют ли в клинике пакетные предложения или скидки?</p>
-                        <img src="assets/icon/plus.svg" alt="plus">
+                    <div class="questions__faq-item">
+                        <div class="questions__faq-grup">
+                            <p>Существуют ли в клинике пакетные предложения или скидки?</p>
+                            <img class="faq-toggle" src="assets/icon/plus.svg" alt="plus">
+                        </div>
+                        <div class="questions__faq-answer">
+                            <div class="information__card">
+                                <div class="information__card-top">
+                                    <p>
+                                        Клиника работает на основании медицинской лицензии и всех 
+                                        необходимых разрешений. Работаем с пациентами на основе
+                                        заключения договора о предоставлении медицинских услуг - 
+                                        прозрачно, безопасно и с защитой вашего здоровья.
+                                    </p>
+                                </div>
+                                <div class="information__card-bott">
+                                    <img src="assets/images/info-ava.jpg" alt="info">
+                                    <div>
+                                        <p>Константинопольский Константин Константинович</p>
+                                        <p>Главный врач клиники, психиатр-нарколог</p>
+                                        <p>Опыт работы: 13 лет</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="questions__faq-grup">
-                        <p>Клиника работает на основании медицинской лицензии?</p>
-                        <img src="assets/icon/plus.svg" alt="plus">
+                    <div class="questions__faq-item">
+                        <div class="questions__faq-grup">
+                            <p>Клиника работает на основании медицинской лицензии?</p>
+                            <img class="faq-toggle" src="assets/icon/plus.svg" alt="plus">
+                        </div>
+                        <div class="questions__faq-answer">
+                            <div class="information__card">
+                                <div class="information__card-top">
+                                    <p>
+                                        Клиника работает на основании медицинской лицензии и всех 
+                                        необходимых разрешений. Работаем с пациентами на основе
+                                        заключения договора о предоставлении медицинских услуг - 
+                                        прозрачно, безопасно и с защитой вашего здоровья.
+                                    </p>
+                                </div>
+                                <div class="information__card-bott">
+                                    <img src="assets/images/info-ava.jpg" alt="info">
+                                    <div>
+                                        <p>Константинопольский Константин Константинович</p>
+                                        <p>Главный врач клиники, психиатр-нарколог</p>
+                                        <p>Опыт работы: 13 лет</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="questions__faq-grup">
-                        <p>Существуют ли в клинике пакетные предложения или скидки?</p>
-                        <img src="assets/icon/plus.svg" alt="plus">
+                    <div class="questions__faq-item">
+                        <div class="questions__faq-grup">
+                            <p>Существуют ли в клинике пакетные предложения или скидки?</p>
+                            <img class="faq-toggle" src="assets/icon/plus.svg" alt="plus">
+                        </div>
+                        <div class="questions__faq-answer">
+                            <div class="information__card">
+                                <div class="information__card-top">
+                                    <p>
+                                        Клиника работает на основании медицинской лицензии и всех 
+                                        необходимых разрешений. Работаем с пациентами на основе
+                                        заключения договора о предоставлении медицинских услуг - 
+                                        прозрачно, безопасно и с защитой вашего здоровья.
+                                    </p>
+                                </div>
+                                <div class="information__card-bott">
+                                    <img src="assets/images/info-ava.jpg" alt="info">
+                                    <div>
+                                        <p>Константинопольский Константин Константинович</p>
+                                        <p>Главный врач клиники, психиатр-нарколог</p>
+                                        <p>Опыт работы: 13 лет</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section> 
     </main>
-    <footer></footer>
+    <footer class="footer">
+
+    </footer>
 </body>
 </html>

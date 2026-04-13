@@ -1,38 +1,41 @@
-.hero{
+.hero {
     background: var(--background-color-3);
     padding: 80px 0;
     position: relative;
     overflow: hidden;
 }
-.hero-background{
+.hero-background {
     position: absolute;
     top: 0;
-    right: -80px; 
-    height: 100%; 
-    object-fit: cover; 
+    right: -80px;
+    height: 100%;
+    object-fit: cover;
 }
-.hero-obj{
+.hero-obj {
     position: absolute;
     right: 7.8%;
     bottom: 0;
     z-index: 0;
+    width: clamp(250px, 30vw, 595px);
+    height: auto;
 }
-.hero__content{
+.hero__content {
     position: relative;
     z-index: 1;
 }
-.hero__content-title{
+.hero__content-title {
     margin-bottom: 50px;
 }
-.hero__content-title p{
+.hero__content-title p {
     font-size: var(--text-xl);
     margin-bottom: 40px;
 }
-.hero__content-tab{
+.hero__content-tab {
     display: flex;
     gap: 12px;
+    flex-wrap: wrap;
 }
-.hero__content-tab li{
+.hero__content-tab li {
     font-size: var(--text-xl);
     color: var(--text-color-2);
     font-weight: 600;
@@ -41,65 +44,65 @@
     border: 1px solid rgba(1, 79, 45, 0.2);
     border-radius: 16px;
 }
-
-.hero__content-cards{
+.hero__content-cards {
     display: flex;
     gap: 12px;
     margin-bottom: 60px;
+    flex-wrap: wrap;
 }
-.hero__card{
+.hero__card {
     max-width: 292px;
+    width: 100%;
     padding: 24px;
     background: rgba(255, 255, 255, 1);
     border: 1px solid rgba(223, 237, 224, 1);
     border-radius: 20px;
 }
-.hero__card-top{
+.hero__card-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
 }
-.hero__card-top span{
+.hero__card-top span {
     font-size: var(--text-sm);
     color: var(--text-color-4);
     margin-bottom: 14px;
     font-weight: 500;
+    display: block;
 }
-.hero__card-top h3{
+.hero__card-top h3 {
     color: var(--text-color-2);
     font-size: var(--text-xl);
 }
-
-.hero__card-list{
+.hero__card-list {
     display: flex;
     align-items: baseline;
     gap: 10px;
     margin-bottom: 20px;
 }
-.hero__card p{
+.hero__card-list p {
     font-size: var(--text-sm);
     font-weight: 500;
     max-width: 224px;
 }
-
-.hero__card-price{
+.hero__card-price {
     margin-bottom: 30px;
     display: inline-block;
     padding: 16px;
     border: 1px solid rgba(223, 237, 224, 1);
     border-radius: 12px;
 }
-.hero__card-price p{
-    font-size:var(--text-sm);
+.hero__card-price p {
+    font-size: var(--text-sm);
     color: var(--text-color-4);
 }
-.hero__card-price p span{
+.hero__card-price p span {
     font-size: var(--text-base);
     color: var(--text-color-2);
     font-weight: 600;
 }
-.hero__card button{
+.hero__card button {
     width: 100%;
     padding: 19px;
     font-size: var(--text-base);
@@ -108,14 +111,114 @@
     background: rgba(238, 248, 238, 1);
     color: var(--text-color-2);
     font-weight: 600;
+    cursor: pointer;
 }
-.hero__content-butt{
+.hero__content-butt {
     display: flex;
     gap: 12px;
     align-items: center;
+    flex-wrap: wrap;
 }
-.hero__content-butt button{
+.hero__content-butt button {
     padding: 23.5px 57px;
     border-radius: 16px;
     font-size: var(--text-lg);
+    cursor: pointer;
+}
+@media (max-width: 1620px) {
+    .hero {
+        padding: 70px 0;
+    }
+    
+    .hero__content-title {
+        margin-bottom: 40px;
+    }
+    
+    .hero__content-cards {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero__content-title {
+        margin-bottom: 35px;
+    }
+    
+    .hero__content-title p {
+        margin-bottom: 30px;
+    }
+    
+    .hero__content-tab li {
+        padding: 15px 20px;
+    }
+    
+    .hero__content-cards {
+        gap: 16px;
+        margin-bottom: 40px;
+        justify-content: center;
+    }
+    
+    .hero__card {
+        max-width: calc(50% - 8px);
+        min-width: 250px;
+    }
+    
+    .hero__content-butt {
+        justify-content: center;
+    }
+    
+    .hero__content-butt button {
+        padding: 16px 32px;
+    }
+    
+    .hero-background {
+        right: -120px;
+        opacity: 0.5;
+    }
+    
+    .hero-obj {
+        right: 5%;
+        width: clamp(200px, 25vw, 450px);
+    }
+}
+@media (max-width: 992px) {
+    .hero {
+        padding: 50px 0;
+    }
+    .hero__card {
+        max-width: 100%;
+        min-width: auto;
+    }
+    .hero__card-price {
+        padding: 12px;
+    }
+    .hero__card button {
+        padding: 14px;
+    }
+    .hero-obj {
+        width: clamp(150px, 20vw, 350px);
+    }
+    .hero-background {
+        content: url('../assets/icon/mobal-hero.svg');
+        position: relative;
+        width: 100%;
+        height: 478px;
+        right: 0;
+        bottom: 0;
+    }
+    .hero-obj {
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        height: 478px;
+    }
+}
+@media (max-width: 813px){
+    .hero__content-butt button{
+        width: 100%;
+    }
 }

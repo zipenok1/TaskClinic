@@ -10,7 +10,7 @@
 }
 .doctors__content-banner{
     background: var(--background-color-1);
-    padding: 50px;
+    padding: 50px 50px 0 50px;
     border-radius: 30px;
     position: relative;
     overflow: hidden;
@@ -22,13 +22,20 @@
     right: 0; 
     height: 100%;
     object-fit: cover; 
+    z-index: 0;
 }
 .doctors-obj{
     position: absolute;
-    top: 0;
+    bottom: -52%;
     right: 4%;
+    z-index: 0;
+    width: clamp(250px, 34vw, 595px);
+    height: auto;
 }
-
+.doctors__content-banner > *:not(.doctors-background):not(.doctors-obj) {
+    position: relative;
+    z-index: 1;
+}
 .doctors-tab{
     display: flex;
     gap: 10px;
@@ -44,10 +51,13 @@
 .doctors-tab button li{
     list-style: inside;
 }
-.doctors-tab button:nth-child(1){
+.doctors-tab button:nth-child(1), .doctors-tab button:nth-child(2){
     background: var(--main-color-3);
 }
 .doctors-tab button:nth-child(2){
+    display: none;
+}
+.doctors-tab button:nth-child(3){
     background: none;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -66,12 +76,11 @@
     color: rgba(255, 255, 255, 1);
     font-size: var(--text-xl);
 }
-.doctors__content-banner button{
+.doctors__content-banner > button{
     padding: 21.5px 42.5px;
     font-size: var(--text-lg);
+    margin-bottom: 50px;
 }
-
-
 
 .doctors__slider-container {
     position: relative;
@@ -97,22 +106,6 @@
     background: rgba(255, 255, 255, 1);
     border-radius: 30px;
     scroll-snap-align: start;
-}
-
-@media (max-width: 1200px) {
-    .doctors__slader {
-        width: calc(33.333% - 14px);
-    }
-}
-@media (max-width: 992px) {
-    .doctors__slader {
-        width: calc(50% - 10px);
-    }
-}
-@media (max-width: 768px) {
-    .doctors__slader {
-        width: calc(100% - 20px);
-    }
 }
 .doctors__slader img {
     width: 100%; 
@@ -140,7 +133,6 @@
     font-size: var(--text-base);
     padding: 17px;
 }
-
 .doctors__slader-nav{
     display: flex;
     justify-content: center;
@@ -151,4 +143,62 @@
 }
 .slider-prev img, .license-slider-prev img{
     transform: rotate(180deg);
+}
+@media (max-width: 1200px) {
+    .doctors__slader {
+        width: calc(33.333% - 14px);
+    }
+    .doctors-obj {
+        bottom: -30%;
+    }
+}
+@media (max-width: 992px) {
+    .doctors-tab{
+        flex-wrap: wrap;
+    }
+    .doctors-tab button:nth-child(1){
+        font-size: 0;
+    }
+    .doctors-tab button:nth-child(1)::before{
+        content: "• Главный врач клиники";
+        font-size: var(--text-lg);
+    }
+    .doctors-tab button:nth-child(2){
+        display: block;
+    }
+    .doctors__content{
+        padding: 40px 0;
+    }
+    .doctors__slader-nav{
+        display: none;
+    }
+    .doctors__content-banner > button {
+        padding: 14px;
+        margin-bottom: 24px;
+    }
+    .doctors__slader {
+        width: calc(50% - 10px);
+    }
+    .doctors-background{
+        content: url('../assets/icon/mobal-appl.svg');
+        position: relative;
+        bottom: 0;
+        right: 0; 
+        width: 100%;
+        height: 374px;   
+        object-fit: cover;
+    }
+    .doctors-obj{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 374px;   
+        width: auto;
+    }
+}
+@media (max-width: 768px) {
+    .doctors__slader {
+        width: calc(100% - 20px);
+    }
 }

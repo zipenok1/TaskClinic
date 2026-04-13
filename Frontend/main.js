@@ -27,6 +27,28 @@ function initSlider(sliderSelector, prevBtnSelector, nextBtnSelector, slideSelec
         })
     })
 }
-
 initSlider('.doctors__content-slader', '.slider-prev', '.slider-next', '.doctors__slader', 16)
 initSlider('.license__content-slader', '.license-slider-prev', '.license-slider-next', '.license__slader-img', 16)
+
+function openModal(){
+    document.querySelector('.modal').classList.add('active')
+    document.body.style.overflow = 'hidden'
+}
+function closeModal(){
+    document.querySelector('.modal').classList.remove('active')
+    document.body.style.overflow = ''
+}
+
+const faqItems = document.querySelectorAll('.questions__faq-item')
+faqItems.forEach(item => {
+    const header = item.querySelector('.questions__faq-grup')
+    
+    header.addEventListener('click', () => {
+        faqItems.forEach(otherItem => {
+            if (otherItem !== item && otherItem.classList.contains('active')) {
+                otherItem.classList.remove('active')
+            }
+        })
+        item.classList.toggle('active');
+    })
+})

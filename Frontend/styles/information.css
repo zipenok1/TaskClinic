@@ -10,11 +10,11 @@
     gap: 42px;
     padding-bottom: 100px;
 }
-.information-img{
-    width: 418px; 
-    height: 418px; 
+.information-img {
+    width: clamp(250px, 30vw, 418px);
+    height: clamp(250px, 30vw, 418px);
     object-fit: cover;
-    border-radius: 20px; 
+    border-radius: 20px;
     flex-shrink: 0;
 }
 .information-text > p{
@@ -97,4 +97,23 @@
 .information__card-bott div p:nth-child(3){
     color: var(--text-color-2);
     font-weight: 500;
+}
+@media (max-width: 992px){
+    .information__content{
+        padding-top: 40px;
+    }
+    .information__content-box{
+        padding-bottom: 0px;
+    }
+}
+@media (max-width: 813px) {
+    .information-img{
+        width: 100%;
+    }
+    .information__content-box{
+        flex-direction: column-reverse;
+    }
+    .information-img.del{
+        display: none;
+    }
 }

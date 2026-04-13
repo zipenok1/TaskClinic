@@ -28,6 +28,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: clamp(120px, 35vw, 531px);
+    height: auto;
 }
 
 .advantages__card{
@@ -63,4 +65,47 @@
 .advantages__card:nth-child(5){
     top: 57.5%;
     right: 8%;
+}
+
+@media(max-width:1360px){
+    .advantages-obj{
+        display: none;
+    }
+}
+@media(max-width:1100px){
+    .advantages__card{
+        position: relative;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .advantages__card:nth-child(2){
+        top: 0;
+        left: 0;
+    }
+    .advantages__card:nth-child(3){
+        top: 0;
+        left:0;
+    }
+    .advantages__card:nth-child(4){
+        top: 0;
+        right: 0;
+    }
+    .advantages__card:nth-child(5){
+        top:0;
+        right: 0;
+    }
+    .advantages__content-cards{
+        height: 100%;
+    }
+}
+@media (max-width: 992px){
+    .advantages, .advantages__content{
+        padding: 40px 0;
+    }
+    .advantages__card img {
+        margin-bottom: 50px;
+    }
+    .advantages__card{
+        padding: 20px;
+    }
 }
